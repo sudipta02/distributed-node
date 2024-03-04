@@ -2,9 +2,9 @@ C:\Users\Sudipta.saho\Downloads\openssl-0.9.8k_X64\bin\openssl.exe req -nodes -n
  -config C:\Users\Sudipta.saho\Downloads\openssl-0.9.8k_X64\openssl.cnf
  --------This command creates two files, namely basic-private-key.key (the private key) and basic-certificate.cert (the public key).----------
 
- # Happens once for the CA
+ # Happens once for the CA (Certificate Authority) 
 $ openssl genrsa -des3 -out ca-private-key.key 2048 --private key generated from this cmd (pass phrase = qwertyuiopasdfghjklzxcvbnm)
-$ openssl req -x509 -new -nodes -key ca-private-key.key \ --CA(Certificate Authority) certificate is generated from the private key
+$ openssl req -x509 -new -nodes -key ca-private-key.key \ --CA certificate is generated from the private key
   -sha256 -days 365 -out shared/tls/ca-certificate.cert \
   -config C:\Users\Sudipta.saho\Downloads\openssl-0.9.8k_X64\openssl.cnf
 
